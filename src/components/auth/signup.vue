@@ -48,7 +48,6 @@
           email: this.email,
           name: this.name,
           password: this.password
-        
         }
         console.log(formData)
         this.$store.dispatch('signup', formData)

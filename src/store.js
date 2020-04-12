@@ -29,6 +29,8 @@ export default new Vuex.Store({
       })
         .then(res => {
           console.log(res)
+           localStorage.setItem('token', res.data.idToken)
+          localStorage.setItem('userId', res.data.localId)
           commit('authUser', {
             token: res.data.idToken,
             userId: res.data.localId
